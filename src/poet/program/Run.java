@@ -12,6 +12,7 @@ public class Run {
 		int index = 0;
 		PoetDiary poetDiary = null;
 		String poemTitle = "";
+		end :
 		do {
 			choice = view.poetProgramMenu();
 			switch(choice) {
@@ -44,7 +45,7 @@ public class Run {
 				switch(view.poemToPoetReadMenu()) {
 				case 1 : 
 					switch(view.seasonMenu()) {
-					case 1 : view.summer(); break;
+					case 1 : view.spring(); break;
 					case 2 : view.summer(); break;
 					case 3 : view.fall(); break;
 					case 4 : view.winter(); break;
@@ -63,12 +64,12 @@ public class Run {
 					case 3 : view.flutter(); break;
 					case 4 : view.angry(); break;
 					}break;
-				case 4 : view.printMessage("프로그램을 종료합니다."); break; 
+				case 4 : view.printMessage("프로그램을 종료합니다."); break end; 
 				}
 				break;
 			case 5 : 
 				view.printMessage("프로그램을 종료합니다.");
-				break;
+				break end;
 			default :
 				view.printMessage("잘못 입력하셨습니다.");
 				break;
